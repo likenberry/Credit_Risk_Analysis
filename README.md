@@ -15,32 +15,32 @@ In order to see which sampling method created the best results, different method
 1. Naive Random Oversampling
 
 - The process of naive random oversampling is a method for an unbalanced data set where more samples from the smaller portion of the data are randomly added so that it is even with the larger portion of the data. The sampling method was used on the data and then used to run a logistics regression model. The accuracy of this sampling technique on the testing data, gave a score of a little over 65% (0.653397) meaning that this model could predict with that accuracy. The classification report showed that the model had a recall score of 67% (0.67). The classification report was generated and displayed in the image below.
-![Naive Oversampling Classification Report](/Users/leahikenberry/Desktop/DU_DATA_Analytics/Credit_Risk_Analysis/Resources/Oversampling_Matrix.png)
+![Naive Oversampling Classification Report](https://github.com/likenberry/Credit_Risk_Analysis/blob/main/Resources/Oversampled_Matrix.png)
 
 2.SMOTE Oversampling
 
 - The SMOTE (synthetic minority oversampling technique) oversampling method is another method used on unbalanced datasets. This method creates synthetic samples from the smaller portion of the data to create a more even dataset. The same process was used to run a logistic regression model with the SMOTE method and the accuracy and confusion matrix were generated. The accuracy of this method was only slightly less than the naive sampling method with a score of around 65% (0.651229) and the classification report showed that this method was better at predicting low risk applicants than high risk applicants. The recall score of 66% (0.66). The output of the confusion matrix is displayed below.
-![SMOTE Oversampling Classification Report](/Users/leahikenberry/Desktop/DU_DATA_Analytics/Credit_Risk_Analysis/Resources/SMOTE_Matrix.png)
+![SMOTE Oversampling Classification Report](https://github.com/likenberry/Credit_Risk_Analysis/blob/main/Resources/SMOTE_Matrix.png)
 
 3.Undersampling
 
 - Undersampling is another technique for dealing with an uneven data set but this time the larger portion of data is reduced to match the smaller portion of data. Another type of undersampling is cluster centroid undersampling which is similar to SMOTE where synthetic data points are created (centroids) representative of the entire cluster. The model was trained and fitted and the accuracy score, confusion matrix and classification report were created. The accuracy score was close to 53% (0.529302) and the classification report showed a recall score of 45% and the model was better at predicting the high risk applicants than the low risk applicants. The below image shows the output of the classification report.
-![Undersampling Classification Report](/Users/leahikenberry/Desktop/DU_DATA_Analytics/Credit_Risk_Analysis/Resources/Undersampling_Matrix.png)
+![Undersampling Classification Report](https://github.com/likenberry/Credit_Risk_Analysis/blob/main/Resources/Undersampling_Matrix.png)
 
 4.Combination (Over and Under) Sampling
 
 - Another method tried on this dataset was a combination of over and undersampling, specifically SMOTEENN.  This process uses SMOTE sampling and ENN (Edited Nearest Neighbors) where the smaller portion of the dataset is sampled using SMOTE and the data is then cleaned and undersampled using ENN. The model was trained and fitted and the accuracy score, confusion matrix and classification report were generated. The accuracy score was almost 51% (0.516939) and the recall score from the classification report was 46% (0.46) but was better at predicting high risk applicants than loan risk. Below is the output of the confusion matrix.
-![SMOTEENN Classification Report](/Users/leahikenberry/Desktop/DU_DATA_Analytics/Credit_Risk_Analysis/Resources/Combination_Matrix.png)
+![SMOTEENN Classification Report](https://github.com/likenberry/Credit_Risk_Analysis/blob/main/Resources/Combination_Matrix.png)
 
 5.Balanced Random Forest Classifier
 
 - Another way to create a better model is to use ensemble learning which combines multpile models to create an even stronger model. A type of ensemble model is a random forest model which uses a bunch of small tress or weak learners to build up to the best predictions. This model was created, trained and fitted and the accuracy score, confusion matrix and classification report was generated. The accuracy score was around 78% (0.6787124) but a recall score of 91% (0.91) and was better at predicting low risk than high risk. The below image shows the classification report output from the model
-![Random Forest Classification Report](/Users/leahikenberry/Desktop/DU_DATA_Analytics/Credit_Risk_Analysis/Resources/Random_Forest_Matrix.png)
+![Random Forest Classification Report](https://github.com/likenberry/Credit_Risk_Analysis/blob/main/Resources/Random_Forest_Matrix.png)
 
 6.Easy Ensemble AdaBoost Classifier
 
 - Another form of ensemble models is adaptive boosting (AdaBoost) where a model is run and the second model takes the errors of the first model to improve it until errors are minimized. The model was trained and tested and the accuracy and confusion matrix were generated. The accuracy score for this model was around 92% (0.925456) and the recall score from the confusion matrix was 94% (0.94). This model had the best accuracy of predicting both the high (0.91) and low (0.94) risk categories. The output image is below.
-![AdaBoost Classification Report](/Users/leahikenberry/Desktop/DU_DATA_Analytics/Credit_Risk_Analysis/Resources/AdaBoost_Matrix.png)
+![AdaBoost Classification Report](https://github.com/likenberry/Credit_Risk_Analysis/blob/main/Resources/AdaBoost_Matrix.png)
 
 ## Summary
 
